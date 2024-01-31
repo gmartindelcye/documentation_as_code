@@ -2,7 +2,7 @@
 
 ## Introduction
 
-As [Docuentation as Code: A Game Changer for DevOps Teams](https://devops.com/documentation-as-code-a-game-changer-for-devops-teams/) states: 
+As [Documentation as Code: A Game Changer for DevOps Teams](https://devops.com/documentation-as-code-a-game-changer-for-devops-teams/) states: 
 
 > Treat software documentation in the same way as software code, enabling efficient collaboration between development and operations teams. The article also outlines the 5 principles of Documentation-as-Code, including version control, plain text formats, collaboration and peer review, automated testing and deployment, and the single source of truth. Additionally, it provides best practices for implementing documentation-as-code in DevOps pipelines.
 
