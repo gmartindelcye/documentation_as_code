@@ -39,6 +39,12 @@ The Documentation Development environment is going to be installed in the global
     python3 -m pip install -r sphinx rinohtype pillow
     ```
 
+    If your going to use Markup, install the myst-parser:
+
+    ```bash
+    python3 -m pip install -r myst-parser
+    ```
+
 2. Create a directory for the project and the `docs` folder inside it.
     
     ```bash
@@ -83,6 +89,18 @@ In the `source` folder there are the files that will be used to generate the doc
 Refer to the [Sphinx Documentation](https://www.sphinx-doc.org/en/master/index.html) to further configure and start the documentation.
 
 
+### Quick configuration
+
+To use Markdown and Pdf modify the `conf.py` file:
+
+```python
+extensions = [
+    "myst_parser",
+    "rinoh.frontend.sphinx",
+]
+```
+
+
 ## Markdown
 
 The Sphinx default language is restructuredText. However, it's possible to use Markdown instead.
@@ -93,4 +111,20 @@ Read [Markdown in Sphinx](https://www.sphinx-doc.org/en/master/usage/markdown.ht
 ## Build Documentation
 
 Once your documentation is written you can build it.
+
+### To create an HTML version:
+
+```bash
+make html
+```
+
+The documentation would be found in `build/html`. Open index.html in your browser to see the documentation.
+
+### To create a PDF version:
+
+```bash
+sphinx-build -b rinoh source build/rinoh
+```
+
+The documentation would be found in `build/rinoh`. Open *<project_name>.pdf* in your browser to see the documentation.
 
